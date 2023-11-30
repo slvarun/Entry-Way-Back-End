@@ -12,7 +12,7 @@ import cookieParser from "cookie-parser"
 const app = express();
 dotenv.config();
 
-
+app.use(cors());
 
 mongoose.set('strictQuery', true);
 const connect = async()=> {

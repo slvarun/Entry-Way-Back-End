@@ -7,12 +7,11 @@ import authRoute from "./routes/auth.js"
 import bookingRoute from "./routes/bookingorder.js"
 import AdminRoute from "./routes/admin.js"
 import cookieParser from "cookie-parser"
-
+import cors from 'cors';
 
 const app = express();
 dotenv.config();
 
-app.use(cors());
 
 mongoose.set('strictQuery', true);
 const connect = async()=> {
@@ -28,6 +27,7 @@ mongoose.connection.on("disconnected", ()=>{
 })
 
 
+app.use(cors());
 
 
 app.use(cookieParser())

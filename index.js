@@ -38,12 +38,12 @@ app.use(express.json())
 
 
 
-app.use("/api/monuments",monumentsRoute);
-app.use("/api/users", userRoute)
+app.use("/monuments",monumentsRoute);
+app.use("/users", userRoute)
                                                     //  using other files as library
-app.use("/api/auth", authRoute)
-app.use("/api/bookingorder", bookingRoute)
-app.use("/api/admin", AdminRoute)
+app.use("/auth", authRoute)
+app.use("/bookingorder", bookingRoute)
+app.use("/admin", AdminRoute)
 
 
 
